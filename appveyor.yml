@@ -6,7 +6,7 @@ install:
     
     pip install pywin32
     
-    setup-x86.exe -qnNdO -R C:/cygwin -s http://cygwin.mirror.constant.com -l C:/cygwin/var/cache/setup -P yasm -P make -P diffutils -P pkg-config -P git
+    C:\cygwin64\setup-x86.exe -qnNdO -R C:/cygwin64 -s http://cygwin.mirror.constant.com -l C:/cygwin/var/cache/setup -P yasm -P diffutils
 build_script:
 - cmd: >-
     dir
