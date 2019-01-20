@@ -2,7 +2,8 @@ version: 1.0.{build}
 image: Visual Studio 2017
 install:
 - cmd: >-
-    dir "C:\Program Files (x86)\"
+    dir "C:\cygwin64\bin"
+    
     exit 1
     
     choco install -y python2
@@ -16,7 +17,7 @@ build_script:
 
     dir
     
-    cd "C:\Program Files (x86)\Microsoft Visual Studio 15.9\VC"
+    cd "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
     
     vcvarsall.bat [amd64, amd64_x86]
     
