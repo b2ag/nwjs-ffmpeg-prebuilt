@@ -2,6 +2,10 @@ version: 1.0.{build}
 image: Visual Studio 2017
 install:
 - cmd: >-
+    C:/cygwin64/bin/bash.exe -c "python -c 'import platform; print(platform.system())'"
+    
+    exit 1
+    
     choco install -y python2
     
     pip install pywin32
@@ -14,10 +18,6 @@ build_script:
     vcvarsall.bat amd64
     
     cd "C:/projects/nwjs-ffmpeg-prebuilt"
-    
-    C:/cygwin64/bin/bash.exe -c "python -c 'import os; print(os.uname()[0])'"
-    
-    exit 1
     
     C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
 
