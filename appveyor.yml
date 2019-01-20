@@ -2,12 +2,6 @@ version: 1.0.{build}
 image: Visual Studio 2017
 install:
 - cmd: >-
-    C:/cygwin/bin/bash.exe -c "python -c 'import platform; print(platform.system())'"
-
-    C:/cygwin64/bin/mintty.exe -e C:/cygwin64/bin/bash.exe -c "echo test > /dev/cons0; python -c 'import platform; print(platform.system())' > /dev/cons0"
-    
-    exit 1
-    
     choco install -y python2
     
     pip install pywin32
@@ -21,7 +15,7 @@ build_script:
     
     cd "C:/projects/nwjs-ffmpeg-prebuilt"
     
-    C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
+    C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
 
     cd "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC"
     
@@ -29,6 +23,6 @@ build_script:
     
     cd "C:/projects/nwjs-ffmpeg-prebuilt"
     
-    C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch ia32 -pc'
+    C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch ia32 -pc'
 artifacts:
 - path: releases/*.zip
