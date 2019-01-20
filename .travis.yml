@@ -4,4 +4,4 @@ python: 2.7
 dist: trusty
 sudo: required
 
-script: python build_ffmpeg.py
+script: python build_ffmpeg.py -pc
