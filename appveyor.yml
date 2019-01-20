@@ -3,8 +3,8 @@ image: Visual Studio 2017
 install:
 - cmd: >-
     choco install -y python2
-
     pip install pywin32
+    C:\cygwin\setup-x86.exe    
 build_script:
 - cmd: >-
     python build_ffmpeg.py --target_arch x64 -pc
