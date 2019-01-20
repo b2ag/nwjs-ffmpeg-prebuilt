@@ -2,7 +2,7 @@ version: 1.0.{build}
 image: Visual Studio 2017
 install:
 - cmd: >-
-    C:/cygwin64/bin/bash.exe -c 'mount'
+    C:/cygwin/bin/bash.exe -c 'mount'
 
     C:/cygwin64/bin/mintty.exe -e C:/cygwin64/bin/bash.exe -c "echo test > /dev/cons0; python -c 'import platform; print(platform.system())' > /dev/cons0"
     
