@@ -15,8 +15,8 @@ build_script:
     
     cd "C:/projects/nwjs-ffmpeg-prebuilt"
     
-    C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
+    C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
 
-    C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch ia32 -pc'
+    C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch ia32 -pc'
 artifacts:
 - path: releases/*.zip
