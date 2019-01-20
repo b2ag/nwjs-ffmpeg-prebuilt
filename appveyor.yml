@@ -11,12 +11,18 @@ build_script:
 - cmd: >-
     cd "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC"
     
-    vcvarsall.bat [amd64, amd64_x86]
+    vcvarsall.bat amd64
     
     cd "C:/projects/nwjs-ffmpeg-prebuilt"
     
     C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch x64 -pc'
 
+    cd "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC"
+    
+    vcvarsall.bat amd64_x86
+    
+    cd "C:/projects/nwjs-ffmpeg-prebuilt"
+    
     C:/cygwin64/bin/mintty.exe C:/cygwin64/bin/bash.exe -c 'python build_ffmpeg.py --target_arch ia32 -pc'
 artifacts:
 - path: releases/*.zip
